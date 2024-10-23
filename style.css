@@ -1,0 +1,398 @@
+@charset "utf-8";
+
+/* ------------------------------ */
+/* カスタムプロパティ */
+/* ------------------------------ */
+
+/* カラー */
+:root {
+    --color-bg-base: #FCF9F2;
+    --color-logo: #fff;
+    --color-base: #11361F;
+    --color-font-text: #333333;
+}
+
+/* コンテナ幅 */
+:root {
+    --width-content: 1366px;
+}
+
+/* フォント */
+:root {
+    --font-family-base: "Oswald";
+    --font-family-sub: "Noto Sans JP";
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+}
+
+/* ------------------------------ */
+/* リセットCSS */
+/* ------------------------------ */
+
+html {
+    color: #000;
+    background: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-base);
+    font-size: 100%;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ------------------------------ */
+/* 全体共通のスタイル */
+/* ------------------------------ */
+
+html {
+    background-color: var(--color-bg-base);
+}
+
+body {
+    line-height: 1.75;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    color: var(--color-font-base);
+    font-family: var(--font-family-base);
+    text-align: left;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 96px;
+}
+
+.sec-title {
+    text-align: center;
+}
+
+h2 {
+    color: var(--color-base);
+    font-weight: var(--font-weight-light);
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-base);
+    display: inline-block;
+}
+
+.copywrite {
+    width: 100%;
+    height: 60px;
+    background-color: var(--color-base);
+    color: white;
+    font-family: "Noto Serif JP", seruf;
+    font-weight: var(--font-weight-regular);
+    font-size: 12px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.wrap {
+    display: flex;
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        line-height: 1.7;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    section {
+        margin-bottom: 64px;
+    }
+
+    .sec-title {
+        font-size: 24px;
+        padding-bottom: 8px;
+    }
+}
+
+
+/* ------------------------------ */
+/* コンテンツ詳細 */
+/* ------------------------------ */
+
+/* トップ */
+.top {
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: 96px;
+}
+
+.kv-img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.logo {
+    width: 566px;
+    height: auto;
+    position: absolute;
+    top: 57px;
+    left: 35px;
+    z-index: 10;
+}
+
+/* Concept */
+.wrap--concept {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+.item-img {
+    width: 60%;
+    height: auto;
+}
+
+.item-text {
+    width: 40%;
+}
+
+.catch-jp {
+    font-family: var(--font-family-sub);
+    font-weight: var(--font-weight-medium);
+    font-size: 36px;
+    line-height: 1.67;
+    letter-spacing: 0.06em;
+    margin-bottom: 20px;
+}
+.catch-en {
+    font-family: var(--font-family-base);
+    font-weight: var(--font-weight-light);
+    font-size: 84px;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    margin-bottom: 40px;
+}
+
+/* Menu */
+.menu-card {
+    padding-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrap-menu {
+    flex-direction: column;
+    width: 50%;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 16px;
+}
+
+.menu-item h3 {
+    font-weight: var(--font-weight-light);
+    font-size: 26px;
+    line-height: 1.73;
+}
+
+.menu-title {
+    font-weight: var(--font-weight-light);
+}
+
+.wrap-menu:nth-of-type(odd) {
+    padding-right: 32px;
+}
+.wrap-menu:nth-of-type(even) {
+    padding-left: 32px;
+}
+
+/* separate */
+.separate img {
+    width: 100%;
+    height: 496px;
+    object-fit: cover;
+}
+
+.separate {
+    margin-bottom: 0;
+}
+
+/* shop */
+.shop {
+    background-color: #fff;
+    padding: 96px 0px;
+}
+
+.wrap--shop {
+    padding-top: 64px;
+}
+
+.wrap--shop img {
+    width: 50%;
+    height: auto;
+}
+
+.box--shop {
+    width: 50%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 64px;
+}
+
+.shop-name {
+    font-family: var(--font-family-sub);
+    font-weight: var(--font-weight-medium);
+    font-size: 24px;
+    padding-bottom: 16px;
+}
+
+.shop-info {
+    font-family: var(--font-family-sub);
+    font-weight: var(--font-weight-regular);
+    font-size: 16px;
+    line-height: 2;
+    padding-top: 16px;
+}
+
+/* footer */
+.wrap--footer {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 96px;
+}
+.box--footer {
+    display: flex;
+}
+
+.box--footer img {
+    width: 233px;
+    height: auto;
+}
+
+.detail--footer {
+    padding-left: 32px;
+    font-family: var(--font-family-sub);
+}
+
+.sns ul{
+    display: flex;
+}
+
+.sns li {
+    font-weight: var(--font-weight-light);
+    padding: 20px;
+}
+
+
+/* ------------------------------ */
+/* レスポンシブ対応 */
+/* ------------------------------ */
+@media screen and (max-width: 640px) {
+    /* top */
+    .logo {
+        width: 90vw;
+        height: auto;
+        top: 230px;
+    }
+
+    /* concept */
+    .wrap--concept {
+        display: block;
+    }
+    .item-img {
+        width: 100%;
+    }
+    .item-text {
+        width: 100%;
+    }
+
+    /* menu */
+    .menu-card {
+        padding-top: 40px;
+        display: block;
+    }
+    .wrap-menu {
+        width: 100%;
+        padding-bottom: 32px;
+    }
+    .wrap-menu:nth-of-type(odd) {
+        padding-right: 0;
+    }
+    .wrap-menu:nth-of-type(even) {
+        padding-left: 0;
+    }
+
+    /* separate */
+    .separate img{
+        height: 226px;
+    }
+
+    /* shop */
+    .shop {
+        padding: 64px 0;
+    }
+    .wrap--shop {
+        padding-top: 40px;
+        display: block;
+    }
+    .wrap--shop img {
+        width: 100%;
+    }
+    .box--shop {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    /* footer */
+    .wrap--footer {
+        flex-direction: column;
+        padding-bottom: 64px;
+        align-items: center;
+    }
+    .box--footer {
+        flex-direction: column;
+        padding-bottom: 24px;
+    }
+    .box--footer img {
+        padding-bottom: 24px;
+    }
+    .detail--footer {
+        padding-left: 0;
+        text-align: center;
+        line-height: 2.3;
+    }
+    
+}
